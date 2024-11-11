@@ -3,6 +3,7 @@ import { DigitalClock } from "@/components/DigitalClock";
 import { Button } from "@/components/ui/button";
 import { useCapacitorClock } from "@/hooks/useCapacitorClock";
 import { useNoSleep } from "@/hooks/useNoSleep";
+// import { Haptics, ImpactStyle } from "@capacitor/haptics";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
 export default function RootIndex() {
@@ -25,6 +26,10 @@ export default function RootIndex() {
               colorPalette={"teal"}
               onClick={() => {
                 handler();
+                // Vibrateも使える。
+                window.navigator.vibrate([70, 100, 70, 100]);
+                // Hapticsプラグインも使える。
+                // Haptics.impact({ style: ImpactStyle.Heavy });
               }}
             >
               <Box
