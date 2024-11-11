@@ -10,6 +10,12 @@ const config: CapacitorConfig = {
     url: host ? `http://${host}:42564` : `http://localhost:42564`,
     cleartext: true,
   },
+  android:{
+    buildOptions: {
+      signingType: 'apksigner'
+    }
+  }
+  
 };
 
 export default config;
