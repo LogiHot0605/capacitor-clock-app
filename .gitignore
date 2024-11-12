@@ -25,3 +25,4 @@ dist-ssr
 src/router.ts
 env4cap.ps1
 buildAndroid.ps1
+scripts/liveReload.ps1
