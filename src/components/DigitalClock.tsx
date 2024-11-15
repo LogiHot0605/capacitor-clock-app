@@ -8,11 +8,10 @@ function DigitalClock(props: { value: Date }) {
           fontSize={"3xl"}
           marginTop={"10"}
           color={"teal"}
-        >{`${props.value.getFullYear()}/${props.value
-          .getMonth()
+        >{`${props.value.getFullYear()}/${(props.value.getMonth() + 1)
           .toString()
           .padStart(2, "0")}/${props.value
-          .getDay()
+          .getDate()
           .toString()
           .padStart(2, "0")}`}</Text>
         <Text fontSize={"6xl"} marginTop={""} color={"teal"}>{`${props.value
